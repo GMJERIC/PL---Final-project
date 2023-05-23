@@ -95,7 +95,12 @@ body {
 	color: white;
 }
 
-
+.username-banner {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: right;
+  font-size: 18px;
+}
 .smartphonesheader{
     padding:30px;
   }
@@ -190,7 +195,28 @@ body {
     color: #fff;
     font-size: 1em;
   }
-  
+
+
+.quantitylabel {
+    display:block;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+}
+.addtocartbut{
+  background-color: #090a0a; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding:5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}  
+.addtocartbut:hover{
+  background-color: #575151;
+} 
 @media screen and (max-width: 600px){
     .container{
       display: block;

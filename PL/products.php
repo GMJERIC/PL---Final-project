@@ -15,7 +15,7 @@
     <a class="active" href="index.php"> Home</a>
     <a href="products.php"> Products</a>
     <a href="aboutus.php"> About us</a>
-    <a class="loginbanner"href="login.php">Login</a>
+    <a class="loginbanner"href="userlogin.php">Login</a>
 
   </div>
   
@@ -27,26 +27,28 @@
 
   <?php
     require_once('connection.php');
-    // fetch products from the database
+   
     $sql = "SELECT * FROM products";
     $result = mysqli_query($conn, $sql);
 
-    // display each product as a separate content block
+    
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<div class="container">
-                  <h3 class="title">' . $row['product_name'] . '</h3>
-                  <div class="content">
-                    <div class="image-overlay"></div>
-                    <img class="content-image" src="' . $row['product_pic'] . '" alt="' . $row['product_name'] . '">
-                    <div class="content-details fadeIn-bottom">
-                        <h3>' . $row['product_name'] . '</h3>
-                        <p>' . $row['product_desc'] . '</p>
-                        
-                    </div>
-                </div>
-              </div>';
-    }
-    mysqli_close($conn);
+      echo '<div class="container">
+      <h3 class="title">' . $row['product_name'] . '</h3>
+      <h3 class="title"> Price: '. $row['product_price'] . '</h3>
+      <h3 class="title"> Stacks: '. $row['stacks'] . '</h3>
+      <div class="content">
+        <div class="image-overlay"></div>
+        <img class="content-image" src="' . $row['product_pic'] . '" alt="' . $row['product_name'] . '">
+        <div class="content-details fadeIn-bottom">
+         
+            <p>' . $row['product_desc'] . '</p>
+            
+        </div>
+    </div>
+  </div>';
+}
+mysqli_close($conn);
 ?>
 </body>
 </html>

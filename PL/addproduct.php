@@ -13,15 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error uploading image.";
         exit;
     }
-    
+    $product_price = $_POST['product_price'];
+    $stacks = $_POST['stacks'];
     $product_desc = $_POST['product_desc'];
+    
         
     
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO products (product_name, product_pic, product_desc) VALUES ('$product_name', '$product_pic', '$product_desc')";
+    $sql = "INSERT INTO products (product_name, product_price, stacks, product_pic, product_desc) 
+            VALUES ('$product_name','$product_price', '$stacks', '$product_pic', '$product_desc' )";
 
     if (mysqli_query($conn, $sql)) {
         echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -35,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_close($conn);
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scaled=1.0">
@@ -46,20 +50,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 <div class="form-popup" id="addProductForm">
-      <form action="addproduct.php" method="post" class="form-container" enctype="multipart/form-data">
-        <h2>Add Product</h2>
-        <label for="product_name"><b>Product Name</b></label>
-        <input type="text" placeholder="Enter Product Name" name="product_name" required>
-        <br>
-        <label for="product_pic"><b>Product Picture</b></label>
-        <br>
-        <input type="file" name="product_pic" accept="image/*" required>
-        <label for="product_desc"><b><br><br>Product Description</b></label>
-        <textarea placeholder="Enter Product Description" name="product_desc" required></textarea>
-        <button type="submit" class="btn success" onclick="location.href='adminproducts.php'">Add Product</button>
-        <button type="button" class="btn cancel" onclick="location.href='adminproducts.php'">Close</button>
-      </form>
-    </div>
+  <form action="addproduct.php" method="post" class="form-container" enctype="multipart/form-data">
+    <h2>Add Product</h2>
+    <label for="product_name"><b>Product Name</b></label>
+    <input type="text" placeholder="Enter Product Name" name="product_name" required>
+    <br>
+    <br>
+    <label for="product_price"><b>Product Price</b></label>
+    <input type="number" placeholder="Enter Product Price" name="product_price" required>
+    <br>
+    <br>
+    <label for="stacks"><b>Stacks</b></label>
+    <input type="number" placeholder="Enter Stocks" name="stacks" required>
+    <br>
+    <br>
+    <label for="product_pic"><b>Product Picture</b></label>
+    <br>
+    
+    <input type="file" name="product_pic" accept="image/*" required>
+    <br>
+    <br>
+    <label for="product_desc"><b>Product Description</b></label>
+    <textarea placeholder="Enter Product Description" name="product_desc" required></textarea>
+  
+    <button type="submit" class="btnsuccess" onclick="location.href='adminproducts.php'">Add Product</button>
+    <button type="button" class="btncancel" onclick="location.href='adminproducts.php'">Close</button>
+  </form>
+</div>
+
   </body>
   <script>
     function showForm() {

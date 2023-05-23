@@ -23,8 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 mysqli_close($conn);
 ?>
-<link rel="stylesheet" href="deleteproduct.css">
-
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ei=edge">
+    <link rel="stylesheet" href="deleteproduct.css">
+    <title>Update Product</title>
+    
+<body>
 <form method="POST">
     <label for="product_id">Select product to delete:</label>
     <select name="product_id">
@@ -34,3 +43,7 @@ mysqli_close($conn);
     </select>
     <input type="submit" value="Delete Product">
 </form>
+<br>
+    <button class="back_button" onclick="location.href='adminproducts.php'" >Back</button>
+</body>
+</html>

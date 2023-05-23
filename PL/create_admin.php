@@ -15,7 +15,7 @@
                 
                 <a href="adminproducts.php"> Products</a>
                 <a href="create_admin.php"> Create Admin</a>
-                <a class="loginbanner"href="login.php">Logout</a>
+                <a class="loginbanner"href="userlogin.php">Logout</a>
 
   </div>
   

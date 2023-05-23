@@ -18,7 +18,7 @@ input[type=text], select, textarea {
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     resize: vertical;
 }
 
@@ -35,10 +35,29 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+
+.btncancel {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btncancel:hover{
+    background-color: #3e8e41;
+}
+
+.btnsuccess{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btnsuccess:hover{
+    background-color: #3e8e41;
 }
 
 .imgcontainer {

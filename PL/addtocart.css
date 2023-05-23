@@ -1,0 +1,171 @@
+
+
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0dcdc;
+    text-align: center;
+}
+.header {
+    overflow: hidden;
+    background-color:black;
+    padding: 20px 10px;
+  }
+  
+.header a {
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 24px; 
+    line-height: 18px;
+    border-radius: 4px;
+  }
+  
+.header a.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left:50px;
+  }
+  
+.header a:hover {
+    background-color:gray;
+    color: black;
+  }
+  
+  
+  
+.header-right {
+    float: left;
+    padding-left:200px;
+  }
+  
+.button-container {
+	text-align: center;
+	margin: 40px;
+  float: right;
+}
+
+.btn {
+	border: none;
+	background-color: inherit;
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 5px;
+    
+}
+
+
+.add {
+	color: white;
+	background-color: #04AA6D;
+  
+}
+
+.add:hover {
+	background-color: green;
+	color: white;
+  
+}
+
+
+.update {
+	color: white;
+    background: #2196F3;
+    
+}
+
+.update:hover {
+	background: blue;
+	color: white;
+}
+
+
+.delete {
+	color: white;
+    background: #e99f30;
+    
+}
+
+.delete:hover {
+	background: rgb(255, 166, 1);
+	color: white;
+}
+
+
+.smartphonesheader{
+    padding:30px;
+  }
+ 
+  
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+   
+}
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    
+}
+th {
+    text-align: left;
+    background-color: rgb(7, 7, 7);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: lightgrey;
+}
+tr:last-child td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+.product_image{
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  
+ 
+}
+.clear_cart{
+  padding-left: 345px;
+
+}
+.clear_cart_butt, .checkoutbutt{
+  background-color: #090a0a; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding:8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.clear_cart_butt:hover, .checkoutbutt:hover{
+  background-color: #575151;
+}
+@media screen and (max-width: 600px){
+    .container{
+      display: block;
+      width: 100%;
+    }
+  }
+  
+@media screen and (min-width: 601px){
+    .container{
+      width: 50%;
+    }
+  }

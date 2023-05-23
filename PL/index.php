@@ -15,7 +15,7 @@
         <a class="active" href="index.html"> Home</a>
         <a href="products.php"> Products</a>
         <a href="aboutus.php"> About us</a>
-        <a class="loginbanner"href="login.php">Login</a>
+        <a class="loginbanner"href="userlogin.php">Login</a>
        </div>
   </div>
 

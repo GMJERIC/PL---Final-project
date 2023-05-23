@@ -15,12 +15,12 @@
     
     <a href="adminproducts.php"> Products</a>
     <a href="create_admin.php"> Create Admin</a>
-    <a class="loginbanner"href="login.php">Logout</a>
+    <a class="loginbanner"href="userlogin.php">Logout</a>
 
   </div>
   
   </div> 
-  
+
   <center >
     <h1 class="smartphonesheader">Smartphones</h1>
   </center>
@@ -35,11 +35,13 @@
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<div class="container">
                   <h3 class="title">' . $row['product_name'] . '</h3>
+                  <h3 class="title"> Price: '. $row['product_price'] . '</h3>
+                  <h3 class="title"> Stacks: '. $row['stacks'] . '</h3>
                   <div class="content">
                     <div class="image-overlay"></div>
                     <img class="content-image" src="' . $row['product_pic'] . '" alt="' . $row['product_name'] . '">
                     <div class="content-details fadeIn-bottom">
-                        <h3>' . $row['product_name'] . '</h3>
+                     
                         <p>' . $row['product_desc'] . '</p>
                         
                     </div>
