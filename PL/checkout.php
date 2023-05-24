@@ -23,13 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart'])) {
                     window.alert('Thanks for buying!!')
                     window.location.href='userproduct.php';
                     </SCRIPT>");
-       
+            unset($_SESSION['cart'][$product_id]);
             exit();
         }
     }
-    unset($_SESSION['cart']);
 }
 header("Location: userproduct.php");
-
-
 ?>
